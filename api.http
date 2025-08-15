@@ -1,0 +1,35 @@
+### Recuperar todas las películas
+GET http://localhost:1324/movies
+
+### Recuperar una película por
+GET http://localhost:1324/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+
+###Recuperar todas las películas por un género
+GET http://localhost:1324/movies?genre=ACTION
+
+### Crear una pelicua
+POST http://localhost:1324/movies
+Content-Type: application/json
+
+{ 
+    "title": "Wilcar",
+    "year": 2000,
+    "director": "Ridley Scott",
+    "duration": 155,
+    "poster": "https://img.fruugo.com/product/0/60/14417600_max.jpg",
+    "genre": [
+      "Action"
+    ]
+}
+
+
+
+### actualizar una película (parcialmente)
+PATCH  http://localhost:1324/movies/8fb17ae1-bdfe-45e5-a871-4772d7e526b8
+Content-Type: application/json
+
+{ 
+  "title": "nada",
+  "year": 2004
+}
+
