@@ -11,7 +11,8 @@ app.use(cors({
       'http://localhost:1234',
       'https://movies.com',
       'https://midu.dev',
-      'http://localhost:8080'
+      'http://localhost:8080',
+      '*'
     ]
 
     if (ACCEPTED_ORIGINS.includes(origin)) {
