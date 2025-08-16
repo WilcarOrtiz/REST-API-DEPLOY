@@ -11,7 +11,8 @@ export class MovieController {
 
     static async getById(req, res) {
         const { id } = req.params
-        const movie = await movieModel.getById(id)
+        console.log(id)
+        const movie = await movieModel.getById({ id })
         if (movie) return res.json({ movie })
         res.status(404).json({ message: 'Movide Not Found' })
     }
@@ -26,7 +27,7 @@ export class MovieController {
 
     static async delete(req, res) {
         const { id } = req.params
-        const result = await movieModel.delete(id)
+        const result = await movieModel.delete({ id })
         if (result === false) return res.status(404).json({ success: false, message: 'Not found' })
         return res.json({ success: result, message: 'Movie Deleted' })
     }
