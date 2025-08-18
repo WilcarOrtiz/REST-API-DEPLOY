@@ -9,6 +9,7 @@ const uri = process.env.MONGODB_URI
 
 // Crear cliente MongoDB
 const client = new MongoClient(uri, {
+    tlsAllowInvalidCertificates: false,
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
