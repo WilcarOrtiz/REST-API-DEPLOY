@@ -1,7 +1,11 @@
 import { MongoClient, ObjectId, ServerApiVersion } from 'mongodb'
+import dotenv from 'dotenv'
 
-// ⚠️ Tu URI con usuario y contraseña directo
-const uri = 'mongodb+srv://ortizcolpaswilcardaniel:6bOb2EaXowf2vwr6@cluster0.stsqihf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+// Cargar variables del archivo .env
+dotenv.config()
+
+// Usar la variable de entorno
+const uri = process.env.MONGODB_URI
 
 // Crear cliente MongoDB
 const client = new MongoClient(uri, {
