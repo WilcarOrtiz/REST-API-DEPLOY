@@ -10,6 +10,7 @@ jobs: #Conjunto de tareas que el workflow va a ejecutar.
   build-and-push: #Nombre del job (cualquiera)
     env:
         usuario: wdortiz
+        app: app-rest-api
     runs-on: ubuntu-latest #donde se ejecutara
 
     steps:
@@ -26,5 +27,5 @@ jobs: #Conjunto de tareas que el workflow va a ejecutar.
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
         run: |
-          docker build -t ${{ env.usuario }}/tu-app:latest .
-          docker push ${{ env.usuario }}/tu-app:latest
+          docker build -t ${{ env.usuario }}/${{ env.app }}:latest .
+          docker push ${{ env.usuario }}/${{ env.app }}:latest
