@@ -4,7 +4,13 @@ name: CI/CD Node.js Docker
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
+#cancelar concurrencia
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs: #Conjunto de tareas que el workflow va a ejecutar.
   build-and-push: #Nombre del job (cualquiera)
