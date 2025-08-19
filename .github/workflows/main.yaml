@@ -26,5 +26,5 @@ jobs: #Conjunto de tareas que el workflow va a ejecutar.
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
         run: |
-          docker build -t tu-usuario/tu-app:latest .
-          docker push tu-usuario/tu-app:latest
+          docker build -t ${{ env.usuario }}/tu-app:latest .
+          docker push ${{ env.usuario }}/tu-app:latest
