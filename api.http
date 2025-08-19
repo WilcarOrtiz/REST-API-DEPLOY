@@ -2,7 +2,7 @@
 GET http://localhost:1324/movies
 
 ### Recuperar una película por
-GET http://localhost:1324/movies/2a4b33fe-7aea-11f0-8f15-346f24a41b94
+GET http://localhost:1324/movies/68a08a0b3d63ee30441dded7
 
 ###Recuperar todas las películas por un género
 GET http://localhost:1324/movies?genre=ACTION

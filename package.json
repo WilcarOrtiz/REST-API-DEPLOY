@@ -4,9 +4,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node server-with-mongo.js",
-    "start:mongo": "node --watch server-with-mongo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +21,9 @@
   },
   "devDependencies": {
     "eslint": "^9.33.0",
-    "standard": "^17.1.2"
+    "jest": "^30.0.5",
+    "standard": "^17.1.2",
+    "supertest": "^7.1.4"
   },
   "eslintConfig": {
     "extends": "standard"
