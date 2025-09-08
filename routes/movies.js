@@ -1,13 +1,15 @@
 import { Router } from 'express'
 import { MovieController } from '../controller/movies.js'
-import { cacheInit } from '../middleware/cache.js'
+import { cacheMiddleware } from '../middleware/cache.js'
+
+//import { cacheMiddleware } from '../middleware/cache.js'
 
 export const createMovieRouter = ({ movieModel }) => {
     const moviesRouter = Router()
     const movieController = new MovieController({ movieModel })
 
-    moviesRouter.get('/', cacheInit, movieController.getAll)
-    moviesRouter.get('/:id', cacheInit, movieController.getById)
+    moviesRouter.get('/', cacheMiddleware(60), movieController.getAll)
+    moviesRouter.get('/:id', cacheMiddleware(60), movieController.getById)
     moviesRouter.post('/', movieController.create)
     moviesRouter.delete('/:id', movieController.delete)
     moviesRouter.patch('/:id', movieController.update)
