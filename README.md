@@ -50,7 +50,8 @@ npm install
 
 4. Llenar las variables de entorno definida en el `.env`
 
-5. Ejecutar la aplicacion en dev:
+5. En el archivo server.js puedes seleccionar el modelo especifico (MongoDB, MySQL, Archivo Local)
+6. Ejecutar la aplicacion en dev:
 
 ```
 npm run start
