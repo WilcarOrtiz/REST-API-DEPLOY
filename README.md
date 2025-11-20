@@ -58,4 +58,9 @@ npm install
 npm run start
 ```
 
+7. REDIS (en local)
+```
+docker run -d --name redis-local -p 6379:6379 redis:latest
+```
+
 [![CI/CD Node.js Docker](https://github.com/WilcarOrtiz/REST-API-DEPLOY/actions/workflows/main.yaml/badge.svg)](https://github.com/WilcarOrtiz/REST-API-DEPLOY/actions/workflows/main.yaml)
