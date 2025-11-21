@@ -1,15 +1,10 @@
-
-import { createClient } from 'redis'
+import { createClient } from "redis";
 
 export const redisClient = createClient({
-    url: process.env.REDIS_URL,
-    socket: {
-        tls: true,
-        rejectUnauthorized: false
-    }
-})
+  url: process.env.REDIS_URL,
+});
 
-redisClient.on('error', (err) => console.error('❌ Redis error', err))
-redisClient.on('connect', () => console.log('✅ Redis connected'))
+redisClient.on("error", (err) => console.error("❌ Redis error", err));
+redisClient.on("connect", () => console.log("✅ Redis connected"));
 
-await redisClient.connect()
+await redisClient.connect();
