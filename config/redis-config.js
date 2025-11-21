@@ -1,5 +1,6 @@
 import { createClient } from "redis";
 
+/*Cambio para la prueba*/
 export const redisClient = createClient({
   url: process.env.REDIS_URL,
 });
