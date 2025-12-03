@@ -21,7 +21,7 @@ API REST construida con **Node.js + Express** siguiendo buenas prácticas de arq
 
 ---
 
-## 📦 Stack usado
+## 📦 Stack Utilizado
 
 - **Runtime:** [Node.js](https://nodejs.org/)
 - **Framework:** [Express.js](https://expressjs.com/)
